@@ -691,7 +691,7 @@ main {
 
 .info-grid-container {
     display: grid;
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2vw;
     width: 90vw;
     max-height: 60vh;
@@ -1102,7 +1102,7 @@ main {
 
 footer {
     width: 98%;
-    height: 40vh;
+    height: 30vh;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -1224,4 +1224,91 @@ footer {
 .footer-contact form button:hover {
     background-color: color-mix(in srgb, var(--c-glass) 72%, transparent);
     animation: glassBounce_light 500ms ease; 
+}
+
+@media only screen and (max-width: 768px) {
+    :root {
+        --c-text-size: 1.8vw;
+        --c-title-size-addition: 2vw;
+        --c-subtitle-size-addition: 1vw;
+        --c-xtra-title-size-addition: 2.5vw;
+    }
+
+    .okta-logo {
+        left: 2vh;
+        top: 12vh;
+    }
+
+    .slide {
+    max-width: 22vw;
+    min-height: 16vw;
+    }
+
+    .sliding-card:hover .slide1, .sliding-card:hover .slide2{
+        transform: none !important;
+    }
+
+    .slide.slide1, .slide.slide2{
+        transform: translateY(0);
+    }
+
+    .slide.slide2 span {
+        opacity: 1;
+    }
+
+    .floating-block-card, .bordeff-block{
+    width: 18vw;
+    height: 16vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    :root {
+        --c-text-size: 2vw;
+        --c-title-size-addition: 2vw;
+        --c-subtitle-size-addition: 1vw;
+        --c-xtra-title-size-addition: 2.5vw;
+    }
+
+    main {
+        margin-top: 0;
+    }
+    
+    .switcher {
+        display: none;
+    }
+
+    .okta-logo {
+        top: 2vh;
+        left: 4vh;
+    }
+
+    .info-grid-container{
+        width: 100%;
+    }
+
+    .stair-bpoint-list ul li img {
+        width: 2vh;
+    }
+
+    .brand-protocols div, .brand-services div {
+        font-size: calc(var(--c-text-size) - 0.5vw);
+    }
+
+    .footer-contact form {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .footer-contact form textarea {
+        grid-row: 4;
+        grid-column: 1;
+    }
+
+    .footer-contact form button {
+        grid-column: 1;
+        margin-left: 0;
+        width: 50%;
+        justify-self: end;
+    }
 }

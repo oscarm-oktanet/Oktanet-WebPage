@@ -55,14 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const oktavia_li = document.querySelectorAll(".stair-bpoint-list ul li");
     const brand_phrase = document.querySelectorAll(".brand-phrase h2");
 
-    // calculateTextSize(); // Initial calculation
-    // window.addEventListener('resize', calculateTextSize); // Recalculate on window resize
-
-    // function calculateTextSize() {
-    //     const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-    //     document.documentElement.style.setProperty('--c-text-size', `${parseFloat(0.1) * vw}px`);
-    //     console.log(`Viewport width: ${vw}px, Text size set to: ${parseFloat(0.1) * vw}px`);
-    // }
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
         if (entry.isIntersecting) {
